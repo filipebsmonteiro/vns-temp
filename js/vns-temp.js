@@ -6,7 +6,7 @@ $(function($) {
     let request = async $ => {
         isRequesting = true;
         await $.ajax({
-            url: 'https://us-central1-tribal-dispatch-269921.cloudfunctions.net/contactless_api',
+            url: 'https://us-central1-veussaude-homolog.cloudfunctions.net/vns_contactless',
             type: 'POST',
             data: {VNS_CONTACTLESS: vnsString},
             contentType: 'text/plain',
