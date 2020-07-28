@@ -22,7 +22,7 @@ $(function($) {
                     $('#div-chamada').hide()
                     $('#div-medindo').hide()
                     $('#div-temperatura').show()
-                    const numero = parseFloat( data.match(/\d+/) );
+                    const numero = parseFloat( data.replace(/[^0-9.-]+/g,"") );
                     const temperatura = numero.toFixed(1)
                     $('#temperatura').html(`Sua temperatura é: ${temperatura} ºC`)
                 }else {
